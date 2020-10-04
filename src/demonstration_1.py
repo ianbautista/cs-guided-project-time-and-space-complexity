@@ -19,6 +19,14 @@ For that solution, you will need to return the length of the modified `nums`.
 The length will tell the user where the end of the array is after removing all
 of the duplicates.*
 """
+
+
 def remove_duplicates(nums):
     # Your code here
 
+    for idx in reversed(range(0, len(nums)-1)):
+        if nums[idx] == nums[idx+1]:
+            nums.pop(idx+1)
+
+
+print(remove_duplicates([0, 1, 1, 2, 2, 2, 3, 4, 4, 5]))
